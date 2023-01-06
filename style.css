@@ -1,1 +1,49 @@
 @import "reset.css";
+
+body {
+}
+
+.dropdown-container {
+    display: block;
+    margin: auto;
+    width: 100px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.dropdown-btn {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-btn:hover {
+    background-color: rgb(219, 206, 188);
+}
+
+.dropdown-container:hover .dropdown-list {
+    display: block;
+}
+
+.dropdown-list {
+    display: none;
+    position: relative;
+    z-index: 10;
+    counter-reset: link;
+}
+
+
+.dropdown-link {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown-link::before {
+    counter-increment: link;
+    content: counter(link) ". ";
+}
+
+.dropdown-link:hover {
+    background-color: rgb(219, 206, 188);
+}
